@@ -1,0 +1,158 @@
+body{
+	animation: slide 2s;
+}
+@-webkit-keyframes slide{
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	100%{
+		margin-top: 0;
+	}
+}
+body {
+	background-color: #02010a;
+	color: white;
+	font-family: 'Dancing Script';
+}
+a{
+	font-size: 1.2em;
+	color: white;
+}
+.menu{
+	text-shadow: 2px 2px 2px #02010a;
+	font-family: 'Dancing Script', bold;
+}
+.retrato{
+	text-decoration: none;
+}
+
+.inicio::after, .paisaje::after, .retrato::after{
+	content: "   |";
+	color: white;
+	font-weight: bold;
+}
+#encabezado{
+	background-color: #5b7989;
+	border-radius: 10px 10px 0px 0px;
+	margin: 0 auto;
+}
+#continente{
+	margin: 0 auto;
+	text-align: center;
+}
+#retratos{
+	background-color: #d5c75f;
+	width: 900px;
+	height: auto;
+	border: 1px white;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+}
+.retra{
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+}
+.retra1, .retra3, .retra5{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+.retra2{
+	filter: sepia(90%);
+	-webkit-filter: sepia(90%);
+}
+footer{
+	font-family: Dancing Script;
+	font-size: 1em;
+	margin: 0 auto;
+}
+#pie{
+	color: #900C3F !important;
+	padding-bottom: 10px;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #C6d5c5;
+	text-align: center;
+}
+#pie{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+h3{
+	text-shadow: 2px 2px 2px #02010a;
+	color: aliceblue;
+}
+img[src$=png]{
+	max-width: 40px;
+}
+img[src$=png]:hover{
+	max-width: 45px;
+}
+@media (max-width:900px){
+	#encabezado{
+		width: 100%;
+		text-align: center;
+		display: flex;
+		display: -webkit-flex;
+		flex-flow: column wrap;
+		-webkit-flex-flow: column wrap;
+		justify-content: center;
+	}
+	.menu{
+		order: 2;
+		transform: translate3d(0px, -5px, 0px);
+	}
+	.titulo{
+		order: 1;
+	}
+	#retratos{
+		width:  100%;
+	}
+	.retra, .retra1, .retra2, .retra3, .retra4, .retra5{
+		width: 100%;
+		margin: 6px 0px;
+	}
+	#pie{
+		width: 100%;
+	}
+	.abajo{
+		width: 100%;
+	}
+}
+@media (min-width:900px){
+	.titulo{
+		transform: translateX(10px);
+}
+	.menu{
+		float: right;
+		margin: 0px auto;
+		transform: translate3d(-10px, -50px, 0px);
+}
+	#continente{
+		transform: translateY(-8px);
+		width: 900px;
+}
+	footer{
+		transform: translateY(-8px);
+		width: 900px;
+	}
+	#encabezado{
+		width: 900px;
+		transform: translateY(15px);
+}
+	.retra, .retra1, .retra2, .retra3, .retra4, .retra5{
+		width: 30%;
+}
+	#retratos{
+		justify-content:space-around;
+	}
+	.abajo{
+		width: 25%;
+	}	
+}
